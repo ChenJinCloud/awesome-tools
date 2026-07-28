@@ -1,0 +1,35 @@
+# Local/private working files
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.sqlite
+*.db
+*.db-shm
+*.db-wal
+*.log
+*.tmp
+
+# Private export outputs
+exports/
+work/
+logs/
+runs/
+private/
+groups/
+metadata/
+manifest.csv
+summary.json
+
+# Tooling caches
+node_modules/
+__pycache__/
+.pytest_cache/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
