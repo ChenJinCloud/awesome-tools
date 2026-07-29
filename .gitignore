@@ -14,7 +14,12 @@
 
 # Private export outputs
 exports/
+export-output/
+export-outputs/
+chatlog-output/
+chatlog-outputs/
 work/
+work_*/
 logs/
 runs/
 private/
@@ -22,6 +27,11 @@ groups/
 metadata/
 manifest.csv
 summary.json
+private_index.json
+snapshot-status*.json
+validation-private*.json
+*.private.json
+*.private.md
 
 # Tooling caches
 node_modules/

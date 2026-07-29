@@ -40,9 +40,11 @@ Always recheck current repository status, release notes, legal/compliance notice
 5. Identify the local WeChat data directory and account ID from the current machine, without hardcoding prior paths.
 6. Acquire the database key using the current supported method for the user's platform.
 7. Start a local-only `chatlog` HTTP service.
-8. Export metadata and conversations.
-9. Verify `manifest.csv`, `summary.json`, message counts, unmatched tables, and selected file hashes.
-10. Stop the local service and keep private artifacts outside public notes or repositories.
+8. Confirm readiness with a loopback harmless API probe such as `scripts/probe_chatlog.py`.
+9. If using a copied data tree, verify the closed-state snapshot with `scripts/verify_closed_snapshot.py` and proceed only on `verified`.
+10. Export metadata and conversations with `scripts/export_chatlog.py`.
+11. Verify `manifest.csv`, `summary.json`, message counts, failures, unmatched tables, and selected private file hashes.
+12. Stop the local service and keep private artifacts outside public notes or repositories.
 
 ## Boundaries And Risks
 
@@ -51,10 +53,13 @@ Always recheck current repository status, release notes, legal/compliance notice
 - Do not upload raw databases, raw chat JSON, keys, helper logs, cookies, sessions, or decrypted work directories to GitHub or cloud tools.
 - Do not publish local account IDs, private conversation aliases, contact identifiers, machine-specific paths, or export hashes if they identify private archives.
 - Treat key acquisition and local decryption as compliance-sensitive and version-sensitive.
+- Do not treat a copied snapshot as complete merely because the directory exists; require an explicit `verified`, `incomplete`, or `unknown` status before export.
 
 ## My Usage Status
 
 This entry records a public-safe version of a local workflow. Private machine paths, account IDs, contact aliases, raw exports, helper logs, and verification outputs are intentionally excluded.
+
+The public repository includes scripts for readiness probing, local export wrapping, snapshot verification, and public-safety scanning. Generated outputs are private local artifacts and should not be committed.
 
 ## Recheck Before Use
 

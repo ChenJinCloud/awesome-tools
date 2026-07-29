@@ -24,7 +24,7 @@ Use the layers separately:
 | Main export tool | `dake2482/chatlog_with_sns` |
 | Historical upstream | `sjzar/chatlog`; verify current status before treating as usable |
 | Optional Windows key helper | `Jrebort/VC-weixin-export`; release-only helper, not the main export engine |
-| Local wrapper scripts | User- or project-specific helpers for starting the service, exporting all talks, and validating manifests |
+| Public wrapper scripts | `scripts/probe_chatlog.py`, `scripts/export_chatlog.py`, `scripts/verify_closed_snapshot.py` |
 
 Before downloading or building anything, recheck the current README, releases, license, and compliance notes for the selected upstream.
 
@@ -39,6 +39,7 @@ Before downloading or building anything, recheck the current README, releases, l
    - Use a local workspace with enough free disk space.
    - Keep raw exports, decrypted work folders, key files, and helper logs out of public repos and ordinary notes.
    - For public deliverables, record only tool links, generic steps, counts, coverage status, and non-identifying caveats.
+   - If exporting from a copied data tree, verify the source-versus-snapshot status before starting the local service.
 
 3. **Prepare main tool**
    - Prefer the current `chatlog_with_sns` source or release if it supports the target OS and WeChat version.
@@ -57,18 +58,22 @@ Before downloading or building anything, recheck the current README, releases, l
 
 6. **Start local service**
    - Start the `chatlog` HTTP service bound to localhost.
-   - Verify the health endpoint before exporting.
+   - Verify readiness with a harmless API probe rather than assuming a dedicated health endpoint exists:
+     `python scripts/probe_chatlog.py --base-url http://127.0.0.1:5030`
+   - Treat `ready`, `decrypting`, `not_ready`, and `unsafe_target` as different states. Continue only on `ready`.
    - Record service URL, account, data directory, and work directory only in private local run metadata if needed.
 
 7. **Export**
-   - Export contacts, chatrooms, sessions, and other available metadata.
-   - Build a talker list from contacts, chatrooms, and sessions.
-   - Export each conversation to JSON, separated into private and group outputs.
-   - Produce `manifest.csv` with talker type, display name, exported message count, bytes, output file, status, and error.
-   - Produce `summary.json` with export root, counts, unmatched message tables, manifest path, and finish time.
+   - Use `scripts/export_chatlog.py` against an already-running local service:
+     `python scripts/export_chatlog.py --base-url http://127.0.0.1:5030 --out-dir <private-output-dir>`
+   - If the source is a copied snapshot, pass `--require-verified-snapshot <private-status-json>`.
+   - The wrapper exports contacts, chatrooms, sessions, and conversations into private local output folders.
+   - `manifest.csv` uses synthetic local labels such as `private_00001` instead of real talker IDs or contact names.
+   - A private `metadata/private_index.json` maps local labels to real IDs and display names. Do not publish it.
+   - `summary.json` records aggregate counts, failures, unmatched message table check status, manifest path, and finish time.
 
 8. **Verify**
-   - Check service health, manifest statuses, exported message totals, zero-message rows, and unmatched message table hashes.
+   - Check readiness result, manifest statuses, exported message totals, zero-message rows, failures, and unmatched message table status.
    - For high-value conversations, verify by resolving aliases through contacts metadata, not by assuming display names are stable.
    - Hash selected output files for private local evidence records when needed.
 
@@ -86,6 +91,32 @@ Before downloading or building anything, recheck the current README, releases, l
 | Manifest misses a known alias | Alias is not the internal talker ID | Resolve via contacts metadata |
 | Public write contains private paths or IDs | Private run context leaked into documentation | Remove and rescan before publishing |
 | Upstream repo changed | Tool source is version-sensitive | Re-read upstream README/releases before continuing |
+| Snapshot status is incomplete or unknown | Copy is missing files, log lacks completion proof, or source changed during copy | Do not export from that snapshot until a verified status JSON exists |
+
+## Closed Snapshot Verification
+
+Before using a copied WeChat data tree as the export source, run a read-only comparison:
+
+```bash
+python scripts/verify_closed_snapshot.py \
+  --source <private-source-root> \
+  --snapshot <private-closed-snapshot-root> \
+  --robocopy-log <private-copy-log> \
+  --out <private-status-json>
+```
+
+Proceed only if the output JSON has `"status": "verified"`. Treat `incomplete` and `unknown` as stop states.
+
+## Public Safety
+
+Before committing or publishing changes derived from private export work:
+
+```bash
+python scripts/check_public_safety.py --root .
+python scripts/test_public_safety.py
+```
+
+Then manually review changed files with `docs/public-review-checklist.md`.
 
 ## Acceptance Criteria
 
@@ -93,4 +124,6 @@ Before downloading or building anything, recheck the current README, releases, l
 - Exported records come only from local desktop data.
 - `manifest.csv` and `summary.json` exist for completed exports.
 - Verification reports count mismatches, failures, and unmatched tables.
+- Readiness is verified by a loopback harmless API probe, not by an assumed health endpoint.
+- Copied snapshots are exported only after `verify_closed_snapshot.py` returns `verified`.
 - No raw chats, keys, helper logs, decrypted work folders, account IDs, private paths, or contact identifiers are published.
