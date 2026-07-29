@@ -1,0 +1,3 @@
+display_name: Agent OS Global
+short_description: Govern non-trivial agent work with records and risk boundaries.
+default_prompt: Use agent-os-global to classify the task, choose a durable record path, and identify any red-action boundary.

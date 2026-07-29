@@ -16,14 +16,21 @@ The goal is not to collect every interesting link. Each entry should explain why
 
 ```text
 catalog/
+  personal-system-skills.md
   wechat-chat-export.md
   wechat-chat-export-validation.md
 docs/
   public-review-checklist.md
 skills/
+  agent-os-global/
+  agent-os-operation/
+  calm-mint-pencil-cover/
+  codex-closeout-archive/
+  creator-pricing/
+  daily-log/
+  open-methodology-md/
+  universal-methodology/
   wechat-chat-export/
-    SKILL.md
-    agents/openai.yaml
 scripts/
   check-public-safety.ps1
   check_public_safety.py
@@ -37,12 +44,21 @@ scripts/
 
 | Entry | Type | Status |
 | --- | --- | --- |
+| [Personal System Skills](catalog/personal-system-skills.md) | Agent skill bundle | Public-safe sanitized skill set added |
 | [WeChat Chat Export](catalog/wechat-chat-export.md) | Local data export workflow | Public-safe summary and Codex skill added |
 | [WeChat Export Validation Status](catalog/wechat-chat-export-validation.md) | Validation note | Current public repo status only; no public raw validation data |
 
 ## Skills
 
-- [wechat-chat-export](skills/wechat-chat-export/SKILL.md): a Codex skill for building or running a local, authorization-bounded WeChat chat-record export workflow around `chatlog_with_sns` / compatible local APIs.
+- [agent-os-global](skills/agent-os-global/SKILL.md): apply local Agent OS governance to non-trivial agent work.
+- [agent-os-operation](skills/agent-os-operation/SKILL.md): operate or audit an Agent OS governance project.
+- [calm-mint-pencil-cover](skills/calm-mint-pencil-cover/SKILL.md): generate a stable calm mint colored-pencil article cover style.
+- [codex-closeout-archive](skills/codex-closeout-archive/SKILL.md): preserve an agent conversation as a concise process asset.
+- [creator-pricing](skills/creator-pricing/SKILL.md): evaluate creator sponsorship pricing and negotiation options.
+- [daily-log](skills/daily-log/SKILL.md): create or update daily logs and basic maintenance records.
+- [open-methodology-md](skills/open-methodology-md/SKILL.md): open the latest methodology Markdown document in a local reader.
+- [universal-methodology](skills/universal-methodology/SKILL.md): clarify ambiguous, high-stakes, or reusable matters before execution.
+- [wechat-chat-export](skills/wechat-chat-export/SKILL.md): build or run an authorization-bounded local WeChat chat-record export workflow around `chatlog_with_sns` / compatible local APIs.
 
 ## WeChat Export Script Flow
 
