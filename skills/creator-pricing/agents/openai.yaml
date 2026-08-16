@@ -1,0 +1,3 @@
+display_name: Creator Pricing
+short_description: Evaluate creator sponsorship pricing and negotiation options.
+default_prompt: Use creator-pricing to assess the creator quote, implied CPM, fit, risks, and negotiation message.

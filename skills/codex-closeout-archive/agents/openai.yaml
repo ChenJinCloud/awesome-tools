@@ -1,0 +1,3 @@
+display_name: Codex Closeout Archive
+short_description: Preserve an agent conversation as a concise process asset.
+default_prompt: Use codex-closeout-archive to create a process asset with decisions, outputs, evidence paths, and follow-ups.

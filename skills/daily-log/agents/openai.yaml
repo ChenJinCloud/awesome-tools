@@ -1,0 +1,3 @@
+display_name: Daily Log
+short_description: Keep daily records, basic state tracking, and next actions.
+default_prompt: Use daily-log to create or update today's log with timeline, completed work, deviations, and tomorrow's minimum actions.

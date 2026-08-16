@@ -1,0 +1,3 @@
+display_name: Agent OS Operation
+short_description: Modify or audit Agent OS governance projects safely.
+default_prompt: Use agent-os-operation to inspect governance files, classify risk, make the smallest change, and validate the Agent OS project.
