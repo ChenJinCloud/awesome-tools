@@ -47,6 +47,7 @@ scripts/
 | [Personal System Skills](catalog/personal-system-skills.md) | Agent skill bundle | Public-safe sanitized skill set added |
 | [WeChat Chat Export](catalog/wechat-chat-export.md) | Local data export workflow | Public-safe summary and Codex skill added |
 | [WeChat Export Validation Status](catalog/wechat-chat-export-validation.md) | Validation note | Current public repo status only; no public raw validation data |
+| [macOS WeChat Chat Export Capability](catalog/macos-wechat-export-capability.md) | Private local export capability | Tested outcome recorded; implementation remains private |
 
 ## Skills
 
