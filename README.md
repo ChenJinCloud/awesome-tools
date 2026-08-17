@@ -21,6 +21,7 @@ catalog/
   wechat-chat-export-validation.md
 docs/
   public-review-checklist.md
+  repository-consolidation/
 skills/
   agent-os-global/
   agent-os-operation/
@@ -50,6 +51,8 @@ scripts/
 | [macOS WeChat Chat Export Capability](catalog/macos-wechat-export-capability.md) | Private local export capability | Tested outcome recorded; implementation remains private |
 
 ## Skills
+
+The `skills/` directory is the canonical public source for these skill packages. A skill should not be maintained in a second standalone repository unless it has an independent release lifecycle that cannot be supported here.
 
 - [agent-os-global](skills/agent-os-global/SKILL.md): apply local Agent OS governance to non-trivial agent work.
 - [agent-os-operation](skills/agent-os-operation/SKILL.md): operate or audit an Agent OS governance project.

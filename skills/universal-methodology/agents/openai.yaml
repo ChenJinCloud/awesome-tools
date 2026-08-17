@@ -1,3 +1,4 @@
-display_name: Universal Methodology
-short_description: Clarify and bound complex decisions before execution.
-default_prompt: Use universal-methodology to classify the matter, calibrate the target, and propose the next state transition.
+interface:
+  display_name: "Universal Methodology"
+  short_description: "Calibrate goals before planning work"
+  default_prompt: "Use $universal-methodology to judge whether this matter is worth progressing, then scope the next 80-point step."
