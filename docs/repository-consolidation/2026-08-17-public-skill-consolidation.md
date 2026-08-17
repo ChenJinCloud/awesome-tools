@@ -28,5 +28,4 @@ The original repositories may be deleted only after all of the following are tru
 - the remote `awesome-tools` branch matches the verified local commit;
 - no credential, private record, absolute personal path or generated output is introduced.
 
-Deletion status: pending verification.
-
+Deletion status: completed on 2026-08-17. Both standalone repositories were permanently deleted after the verified `awesome-tools` commit `ee33b1fa5562cd1941ea29569c5663e7afb76157` reached `main`; subsequent API checks returned `404 Not Found` for both original repository paths.
