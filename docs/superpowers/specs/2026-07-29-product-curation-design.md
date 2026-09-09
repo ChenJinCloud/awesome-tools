@@ -39,7 +39,7 @@ templates/
   product-entry.md
 ```
 
-- `catalog/` retains deep tool and workflow records such as the existing WeChat export entry.
+- `catalog/` retains reviewed tool records and high-level capability or use-case notes; private implementations remain outside this repository.
 - `products/` contains formally accepted product entries.
 - `archive/` preserves entries that are no longer current or recommended, together with the reason.
 - Candidates remain in GitHub Issues and do not appear under `products/`.

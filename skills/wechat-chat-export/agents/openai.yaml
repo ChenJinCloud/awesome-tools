@@ -1,6 +1,0 @@
-interface:
-  display_name: "WeChat Chat Export"
-  short_description: "Local WeChat export workflow with privacy boundaries"
-  default_prompt: "Use $wechat-chat-export to plan and verify a local WeChat chat-record export without exposing private data."
-policy:
-  allow_implicit_invocation: true

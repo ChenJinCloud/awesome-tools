@@ -1,20 +1,24 @@
-# macOS WeChat Chat Export Capability
+# Private WeChat Archive Capability and Post-Export Uses
 
-Status: `tested`
+Status: `privately maintained and validated`
 
-Last reviewed: 2026-08-17
+Last reviewed: 2026-09-09
 
-I maintain a private solution for periodically exporting WeChat records that are already available on macOS. The implementation remains private; this page records only the verified capability and its outcome.
+I maintain a private, local method for turning WeChat records already synchronized to my Mac into a searchable archive. The implementation, operational workflow, private repository, configuration, and validation evidence are not published here.
 
-## Verified Outcome
+This page records only the capability boundary and the ways I have actually used the resulting private archive.
 
-- End-to-end results have been validated across multiple authorized local accounts.
-- The result is a locally retained, searchable archive suitable for later review and analysis.
-- Verified coverage includes messages, contacts, group chats, recent sessions, Moments, and Favorites.
-- Each completed export can be checked for completeness and retained as a reviewable snapshot.
+## How I Use The Archive
+
+- Retrieve past decisions, commitments, and context from conversations I am authorized to review.
+- Reconstruct time-bounded relationship and collaboration timelines instead of relying on memory or isolated excerpts.
+- Review recurring problem-solving patterns in past help and collaboration conversations to understand my own capabilities.
+- Give local AI tools a private, evidence-bounded source for answering questions with traceable conversation context.
 
 ## Scope
 
-“Complete” means records that were synchronized and available in the accepted local Mac data snapshot. It does not imply recovery of records deleted from the server, never synchronized, or never held by that Mac.
+The archive covers records synchronized to and accepted from the local Mac snapshot used for a completed run. It does not imply recovery of server-deleted, unsynchronized, never-downloaded, or untranscribed media content.
 
-No implementation details, private repository links, account identifiers, local paths, credentials, raw records, private counts, or validation artifacts are published here.
+## Public Boundary
+
+This public repository does not contain the export implementation, setup instructions, upstream-tool research, raw or decrypted databases, chat records, contact data, account identifiers, private paths, credentials, logs, private counts, or validation artifacts.
