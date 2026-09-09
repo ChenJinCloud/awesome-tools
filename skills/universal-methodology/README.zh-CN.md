@@ -14,4 +14,4 @@
 
 ## 许可证
 
-MIT。参见 `LICENSE`。
+MIT。参见具有法律效力的[英文许可证](LICENSE)和[非官方中文译本](LICENSE.zh-CN.md)。

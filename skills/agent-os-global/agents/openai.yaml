@@ -1,3 +1,3 @@
-display_name: Agent OS Global
-short_description: Govern non-trivial agent work with records and risk boundaries.
-default_prompt: Use agent-os-global to classify the task, choose a durable record path, and identify any red-action boundary.
+display_name: "Agent OS Global / Agent OS 全局治理"
+short_description: "Govern non-trivial agent work with records and risk boundaries. / 用记录和风险边界治理非简单 Agent 工作。"
+default_prompt: "Use agent-os-global to classify the task, choose a durable record path, and identify any red-action boundary. / 使用 agent-os-global 对任务分类、选择持久记录路径，并识别红色操作边界。"

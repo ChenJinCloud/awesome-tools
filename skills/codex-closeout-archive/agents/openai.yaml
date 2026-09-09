@@ -1,4 +1,4 @@
 interface:
-  display_name: "Codex Closeout Archive"
-  short_description: "Close Codex threads into the current project folder"
-  default_prompt: "Use $codex-closeout-archive to close this conversation into this project folder and archive it."
+  display_name: "Codex Closeout Archive / Codex 收尾归档"
+  short_description: "Close Codex threads into the current project folder. / 将 Codex 任务收尾并归档到当前项目文件夹。"
+  default_prompt: "Use $codex-closeout-archive to close this conversation into this project folder and archive it. / 使用 $codex-closeout-archive 将本次对话收尾、写入当前项目文件夹并归档。"

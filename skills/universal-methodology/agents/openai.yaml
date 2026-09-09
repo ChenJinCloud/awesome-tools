@@ -1,4 +1,4 @@
 interface:
-  display_name: "Universal Methodology"
-  short_description: "Calibrate goals before planning work"
-  default_prompt: "Use $universal-methodology to judge whether this matter is worth progressing, then scope the next 80-point step."
+  display_name: "Universal Methodology / 通用方法论"
+  short_description: "Calibrate goals before planning work. / 在规划工作前校准目标。"
+  default_prompt: "Use $universal-methodology to judge whether this matter is worth progressing, then scope the next 80-point step. / 使用 $universal-methodology 判断此事项是否值得推进，再界定下一步达到 80 分的范围。"

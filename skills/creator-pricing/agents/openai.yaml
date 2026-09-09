@@ -1,3 +1,3 @@
-display_name: Creator Pricing
-short_description: Evaluate creator sponsorship pricing and negotiation options.
-default_prompt: Use creator-pricing to assess the creator quote, implied CPM, fit, risks, and negotiation message.
+display_name: "Creator Pricing / 创作者定价"
+short_description: "Evaluate creator sponsorship pricing and negotiation options. / 评估创作者赞助定价和谈判方案。"
+default_prompt: "Use creator-pricing to assess the creator quote, implied CPM, fit, risks, and negotiation message. / 使用 creator-pricing 评估创作者报价、隐含 CPM、匹配度、风险和谈判信息。"

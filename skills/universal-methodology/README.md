@@ -14,4 +14,4 @@ The full progression template is available in [English](references/project-progr
 
 ## License
 
-MIT. See `LICENSE`.
+MIT. See the canonical [English license](LICENSE) and the [unofficial Chinese translation](LICENSE.zh-CN.md).

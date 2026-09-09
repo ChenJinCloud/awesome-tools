@@ -77,7 +77,7 @@ pip install -r requirements-dev.txt
 pytest
 ```
 
-CI runs this suite on every push and pull request (`.github/workflows/tests.yml`).
+CI runs this suite on every push and pull request (`.github/workflows/skill-tests.yml`).
 
 ## Changelog
 
@@ -85,4 +85,4 @@ See [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See the canonical [English license](LICENSE) and the [unofficial Chinese translation](LICENSE.zh-CN.md).

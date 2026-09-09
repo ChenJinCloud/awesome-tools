@@ -77,7 +77,7 @@ pip install -r requirements-dev.txt
 pytest
 ```
 
-CI 会在每次 Push 和 Pull Request 时运行测试套件（`.github/workflows/tests.yml`）。
+CI 会在每次 Push 和 Pull Request 时运行测试套件（`.github/workflows/skill-tests.yml`）。
 
 ## 变更日志
 
@@ -85,4 +85,4 @@ CI 会在每次 Push 和 Pull Request 时运行测试套件（`.github/workflows
 
 ## 许可证
 
-MIT。参见 [LICENSE](LICENSE)。
+MIT。参见具有法律效力的[英文许可证](LICENSE)和[非官方中文译本](LICENSE.zh-CN.md)。

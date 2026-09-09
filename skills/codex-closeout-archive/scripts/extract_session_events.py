@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Extract a compact event inventory from a Codex session JSONL file."""
+"""Extract a compact event inventory from a Codex session JSONL file. / 从 Codex 会话 JSONL 文件中提取精简事件清单。"""
 
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ def iter_session_files() -> Iterable[Path]:
 def latest_session() -> Path:
     files = list(iter_session_files())
     if not files:
-        raise SystemExit("No Codex session files found under ~/.codex.")
+        raise SystemExit("No Codex session files found under ~/.codex. / 未在 ~/.codex 下找到 Codex 会话文件。")
     return max(files, key=lambda p: p.stat().st_mtime)
 
 
@@ -136,14 +136,14 @@ def load_events(path: Path, max_chars: int, include_system: bool) -> tuple[dict[
 
 def render(path: Path, meta: dict[str, Any], events: list[dict[str, str]]) -> str:
     lines = [
-        "# Codex Session Event Inventory",
+        "# Codex Session Event Inventory / Codex 会话事件清单",
         "",
-        f"Session file: `{path}`",
-        f"Thread id: `{meta.get('id', 'unknown')}`",
-        f"Started: `{meta.get('timestamp', 'unknown')}`",
-        f"CWD: `{meta.get('cwd', 'unknown')}`",
+        f"Session file: `{path}` / 会话文件",
+        f"Thread id: `{meta.get('id', 'unknown')}` / 任务 ID",
+        f"Started: `{meta.get('timestamp', 'unknown')}` / 开始时间",
+        f"CWD: `{meta.get('cwd', 'unknown')}` / 工作目录",
         "",
-        "| Time | Kind | Summary |",
+        "| Time / 时间 | Kind / 类型 | Summary / 摘要 |",
         "| --- | --- | --- |",
     ]
 
@@ -157,11 +157,11 @@ def render(path: Path, meta: dict[str, Any], events: list[dict[str, str]]) -> st
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument("--session", type=Path, help="Path to a Codex rollout JSONL file.")
-    group.add_argument("--latest", action="store_true", help="Use the latest modified rollout JSONL file.")
-    parser.add_argument("--out", type=Path, help="Optional markdown output path.")
-    parser.add_argument("--max-chars", type=int, default=220, help="Max characters per event summary.")
-    parser.add_argument("--include-system", action="store_true", help="Include system/developer/environment messages.")
+    group.add_argument("--session", type=Path, help="Path to a Codex rollout JSONL file. / Codex rollout JSONL 文件路径。")
+    group.add_argument("--latest", action="store_true", help="Use the latest modified rollout JSONL file. / 使用最后修改的 rollout JSONL 文件。")
+    parser.add_argument("--out", type=Path, help="Optional markdown output path. / 可选的 Markdown 输出路径。")
+    parser.add_argument("--max-chars", type=int, default=220, help="Max characters per event summary. / 每条事件摘要的最大字符数。")
+    parser.add_argument("--include-system", action="store_true", help="Include system/developer/environment messages. / 包含系统、开发者和环境消息。")
     args = parser.parse_args()
 
     path = latest_session() if args.latest else args.session

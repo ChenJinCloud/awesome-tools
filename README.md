@@ -8,7 +8,7 @@ The goal is not to collect every interesting link. Each entry should explain why
 
 ## Languages
 
-All human-facing Markdown content is available in English and Simplified Chinese. English files use the canonical filename; their Chinese companions use the `.zh-CN.md` suffix. Skill metadata and machine-readable instructions remain in the canonical `SKILL.md`, with `SKILL.zh-CN.md` provided for Chinese readers.
+All human-facing content is available in English and Simplified Chinese, including Markdown documents, skill interface labels, and CLI messages. English Markdown files use the canonical filename; their Chinese companions use the `.zh-CN.md` suffix. Code identifiers, configuration keys, and commands remain canonical so integrations continue to work.
 
 ## Principles
 
@@ -81,3 +81,7 @@ Use this shape when adding a new tool, workflow, or capability note:
 ## Public Boundary
 
 This repository contains public, reusable material only. Private implementations, personal source data, credentials, machine-specific paths, raw exports, and private validation evidence belong in their respective private systems.
+
+## License
+
+MIT. See the canonical [English license](LICENSE) and the [unofficial Chinese translation](LICENSE.zh-CN.md).
