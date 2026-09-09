@@ -1,5 +1,7 @@
 # Awesome Tools
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 This repository is my public catalog of high-quality tools, workflows, and reusable agent skills.
 
 The goal is not to collect every interesting link. Each entry should explain why the tool or solution is useful, where it fits, what boundary or risk matters, and whether I have actually used or verified it.
@@ -16,12 +18,17 @@ The goal is not to collect every interesting link. Each entry should explain why
 
 ```text
 catalog/
+  chatlog-with-sns.md
+  macos-wechat-export-capability.md
   personal-system-skills.md
   wechat-chat-export.md
   wechat-chat-export-validation.md
 docs/
   public-review-checklist.md
   repository-consolidation/
+  superpowers/
+    plans/
+    specs/
 skills/
   agent-os-global/
   agent-os-operation/
@@ -45,6 +52,7 @@ scripts/
 
 | Entry | Type | Status |
 | --- | --- | --- |
+| [`chatlog_with_sns`](catalog/chatlog-with-sns.md) | Upstream local WeChat tool | Researched; compatibility and long-term maintenance require rechecking |
 | [Personal System Skills](catalog/personal-system-skills.md) | Agent skill bundle | Public-safe sanitized skill set added |
 | [WeChat Chat Export](catalog/wechat-chat-export.md) | Local data export workflow | Public-safe summary and Codex skill added |
 | [WeChat Export Validation Status](catalog/wechat-chat-export-validation.md) | Validation note | Current public repo status only; no public raw validation data |
