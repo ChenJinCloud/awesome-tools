@@ -5,6 +5,8 @@ description: Close and archive Codex conversations by creating a concise traceab
 
 # Codex Closeout Archive
 
+[English](SKILL.md) | [简体中文](SKILL.zh-CN.md)
+
 Use this skill when the user explicitly asks to close, archive, end, harvest, or preserve a Codex conversation. It turns the conversation into a lightweight process asset, then archives the conversation.
 
 The user's explicit closeout request is the assetization decision. Do not re-litigate whether the thread deserves preservation once this skill has been invoked; every closeout creates a concise process asset.

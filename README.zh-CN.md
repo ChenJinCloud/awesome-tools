@@ -6,6 +6,10 @@
 
 这个仓库的目标不是收集所有看起来有趣的链接。每个条目都应该说明工具或方案为什么有用、适合放在什么位置、需要注意哪些边界或风险，以及我是否实际使用或验证过它。
 
+## 语言
+
+所有面向读者的 Markdown 内容均提供英文和简体中文版本。英文文件使用标准文件名，中文版本使用 `.zh-CN.md` 后缀。Skill 的元数据和机器可读指令保留在标准 `SKILL.md` 中，同时提供 `SKILL.zh-CN.md` 供中文读者阅读。
+
 ## 原则
 
 - 优先收录经过实际检验的工作流，而不是泛泛推荐。
@@ -42,21 +46,21 @@ skills/
 
 | 条目 | 类型 | 状态 |
 | --- | --- | --- |
-| [个人系统 Skills](catalog/personal-system-skills.md) | Agent Skill 合集 | 已加入经过脱敏、适合公开的 Skill 集合 |
-| [私有微信归档能力与导出后用例](catalog/macos-wechat-export-capability.md) | 私有本地能力 | 只公开能力和实际导出后用例；实现保持私有 |
+| [个人系统 Skills](catalog/personal-system-skills.zh-CN.md)（[English](catalog/personal-system-skills.md)） | Agent Skill 合集 | 已加入经过脱敏、适合公开的 Skill 集合 |
+| [私有微信归档能力与导出后用例](catalog/macos-wechat-export-capability.zh-CN.md)（[English](catalog/macos-wechat-export-capability.md)） | 私有本地能力 | 只公开能力和实际导出后用例；实现保持私有 |
 
 ## Skills
 
 `skills/` 是这些 Skill 包的公开权威源。除非某个 Skill 具有无法在本仓库中支持的独立发布生命周期，否则不应再维护第二个独立仓库。
 
-- [agent-os-global](skills/agent-os-global/SKILL.md)：把本地 Agent OS 治理规则应用到非简单任务。
-- [agent-os-operation](skills/agent-os-operation/SKILL.md)：运行或审查 Agent OS 治理项目。
-- [calm-mint-pencil-cover](skills/calm-mint-pencil-cover/SKILL.md)：生成稳定的薄荷绿色铅笔风文章封面。
-- [codex-closeout-archive](skills/codex-closeout-archive/SKILL.md)：把 Agent 对话保存成精简、可追溯的过程资产。
-- [creator-pricing](skills/creator-pricing/SKILL.md)：评估创作者赞助报价和谈判方案。
-- [daily-log](skills/daily-log/SKILL.md)：创建或更新每日日志及基础维护记录。
-- [open-methodology-md](skills/open-methodology-md/SKILL.md)：在本地阅读器中打开最新的方法论 Markdown 文档。
-- [universal-methodology](skills/universal-methodology/SKILL.md)：在执行前厘清模糊、高风险或具有复用价值的事项。
+- [agent-os-global](skills/agent-os-global/SKILL.zh-CN.md)：把本地 Agent OS 治理规则应用到非简单任务。
+- [agent-os-operation](skills/agent-os-operation/SKILL.zh-CN.md)：运行或审查 Agent OS 治理项目。
+- [calm-mint-pencil-cover](skills/calm-mint-pencil-cover/SKILL.zh-CN.md)：生成稳定的薄荷绿色铅笔风文章封面。
+- [codex-closeout-archive](skills/codex-closeout-archive/SKILL.zh-CN.md)：把 Agent 对话保存成精简、可追溯的过程资产。
+- [creator-pricing](skills/creator-pricing/SKILL.zh-CN.md)：评估创作者赞助报价和谈判方案。
+- [daily-log](skills/daily-log/SKILL.zh-CN.md)：创建或更新每日日志及基础维护记录。
+- [open-methodology-md](skills/open-methodology-md/SKILL.zh-CN.md)：在本地阅读器中打开最新的方法论 Markdown 文档。
+- [universal-methodology](skills/universal-methodology/SKILL.zh-CN.md)：在执行前厘清模糊、高风险或具有复用价值的事项。
 
 ## 条目模板
 

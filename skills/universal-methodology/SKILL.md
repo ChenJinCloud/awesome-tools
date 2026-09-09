@@ -5,6 +5,8 @@ description: Apply the 80-point universal methodology v1.2 to ambiguous, complex
 
 # Universal Methodology
 
+[English](SKILL.md) | [简体中文](SKILL.zh-CN.md)
+
 Use this skill to move a matter from vague input to a judged, bounded, executable, and closable structure without over-managing everything.
 
 The v1.2 emphasis is decision quality before progression: do not merely help the user execute a matter faster. First check whether the target is right, whether default values are driving it, and whether progressing it improves the user's future position.

@@ -1,5 +1,7 @@
 # Product Curation Design
 
+[English](2026-07-29-product-curation-design.md) | [简体中文](2026-07-29-product-curation-design.zh-CN.md)
+
 ## Purpose
 
 `awesome-tools` is a small, strict, personal product collection built on the maintainer's direct experience, sustained observation, or trusted first-hand user experience. It is not intended to be a comprehensive directory, a bookmark collection, or a vendor advertising channel.

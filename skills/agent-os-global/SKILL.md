@@ -5,6 +5,8 @@ description: Use to apply a local Agent OS governance protocol to non-trivial ag
 
 # Agent OS Global
 
+[English](SKILL.md) | [简体中文](SKILL.zh-CN.md)
+
 Use this skill when an agent task may affect future context, records, rules, permissions, or work continuity. It is a portable public version; replace the placeholder paths with your own local operating-system paths.
 
 ## Canonical Inputs

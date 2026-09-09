@@ -5,6 +5,8 @@ description: Use to create or update daily logs, maintenance notes, plans-vs-act
 
 # Daily Log
 
+[English](SKILL.md) | [简体中文](SKILL.zh-CN.md)
+
 Use this skill when the user wants to record the day, update a log, compare plan versus actual, or track basic maintenance state.
 
 ## Configure Paths

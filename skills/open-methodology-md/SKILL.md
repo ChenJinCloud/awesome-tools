@@ -5,6 +5,8 @@ description: Use to find the latest methodology Markdown document in a local kno
 
 # Open Methodology Markdown
 
+[English](SKILL.md) | [简体中文](SKILL.zh-CN.md)
+
 Use this skill when the user asks to view the latest methodology document rather than print its contents in chat.
 
 ## Configure Paths

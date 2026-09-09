@@ -1,5 +1,7 @@
 # Private WeChat Archive Capability and Post-Export Uses
 
+[English](macos-wechat-export-capability.md) | [简体中文](macos-wechat-export-capability.zh-CN.md)
+
 Status: `privately maintained and validated`
 
 Last reviewed: 2026-09-09

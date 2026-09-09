@@ -1,5 +1,7 @@
 # Public Skill Repository Consolidation
 
+[English](2026-08-17-public-skill-consolidation.md) | [简体中文](2026-08-17-public-skill-consolidation.zh-CN.md)
+
 Date: 2026-08-17
 
 ## Decision

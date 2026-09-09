@@ -1,5 +1,7 @@
 # Changelog
 
+[English](CHANGELOG.md) | [简体中文](CHANGELOG.zh-CN.md)
+
 ## 2026-08-07
 
 - Added `LICENSE` (MIT). The repo was public with no declared license, which meant reuse or forking had no clear legal basis.

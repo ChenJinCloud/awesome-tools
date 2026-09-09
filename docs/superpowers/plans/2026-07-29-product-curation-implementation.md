@@ -1,5 +1,9 @@
 # Product Curation Implementation Plan
 
+[English](2026-07-29-product-curation-implementation.md) | [简体中文](2026-07-29-product-curation-implementation.zh-CN.md)
+
+> Historical plan: this document describes a proposed implementation sequence. It is not proof that the described files, checks, or repository state are current or implemented.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Add a small, strict product-curation system that separates candidates from formal entries, enforces evidence-based statuses, and protects the public repository from malformed, stale, duplicate, or sensitive submissions.

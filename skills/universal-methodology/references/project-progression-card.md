@@ -1,5 +1,7 @@
 # 80分通用事项推进卡 v1.2
 
+[English](project-progression-card.en.md) | [简体中文](project-progression-card.md)
+
 Use this card when a user needs full planning, review, source-material extraction, or structured decision support. Fill only useful fields. Convert blank fields into concise questions when information is missing.
 
 ## 0. Capture | 事项收拢

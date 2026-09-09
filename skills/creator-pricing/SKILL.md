@@ -5,6 +5,8 @@ description: Use to evaluate YouTube creator sponsorship pricing, negotiation po
 
 # Creator Pricing
 
+[English](SKILL.md) | [简体中文](SKILL.zh-CN.md)
+
 Use this skill when the user needs to judge whether a creator quote is reasonable, how to negotiate, or whether to renew a creator partnership.
 
 ## Inputs

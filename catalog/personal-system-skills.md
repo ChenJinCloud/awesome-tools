@@ -1,5 +1,7 @@
 # Personal System Skills
 
+[English](personal-system-skills.md) | [简体中文](personal-system-skills.zh-CN.md)
+
 ## What This Is
 
 A public-safe bundle of reusable agent skills for personal operating systems, agent governance, daily records, conversation closeout, creator pricing, and stable visual generation.

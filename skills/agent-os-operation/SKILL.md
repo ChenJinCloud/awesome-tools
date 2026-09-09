@@ -5,6 +5,8 @@ description: Use when modifying or auditing a local Agent OS project that stores
 
 # Agent OS Operation
 
+[English](SKILL.md) | [简体中文](SKILL.zh-CN.md)
+
 Use this skill for work inside an Agent OS governance project. It is narrower than `agent-os-global`: it applies when the Agent OS project itself is the target.
 
 ## Required Local Files

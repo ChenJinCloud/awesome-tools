@@ -1,5 +1,7 @@
 # Codex Closeout Archive
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 `codex-closeout-archive` is a Codex skill for closing a conversation with a compact, traceable process asset before archiving the thread.
 
 It is designed for workflows where important context lives in the conversation itself: intent changes, user corrections, evidence paths, file outputs, decisions, and final state.

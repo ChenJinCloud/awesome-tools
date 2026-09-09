@@ -6,6 +6,10 @@ This repository is my public catalog of high-quality tools, workflows, and reusa
 
 The goal is not to collect every interesting link. Each entry should explain why the tool or solution is useful, where it fits, what boundary or risk matters, and whether I have actually used or verified it.
 
+## Languages
+
+All human-facing Markdown content is available in English and Simplified Chinese. English files use the canonical filename; their Chinese companions use the `.zh-CN.md` suffix. Skill metadata and machine-readable instructions remain in the canonical `SKILL.md`, with `SKILL.zh-CN.md` provided for Chinese readers.
+
 ## Principles
 
 - Prefer field-tested workflows over generic recommendations.
@@ -42,8 +46,8 @@ skills/
 
 | Entry | Type | Status |
 | --- | --- | --- |
-| [Personal System Skills](catalog/personal-system-skills.md) | Agent skill bundle | Public-safe sanitized skill set added |
-| [Private WeChat Archive Capability and Post-Export Uses](catalog/macos-wechat-export-capability.md) | Private local capability | Capability and actual post-export uses only; implementation remains private |
+| [Personal System Skills](catalog/personal-system-skills.md) ([中文](catalog/personal-system-skills.zh-CN.md)) | Agent skill bundle | Public-safe sanitized skill set added |
+| [Private WeChat Archive Capability and Post-Export Uses](catalog/macos-wechat-export-capability.md) ([中文](catalog/macos-wechat-export-capability.zh-CN.md)) | Private local capability | Capability and actual post-export uses only; implementation remains private |
 
 ## Skills
 

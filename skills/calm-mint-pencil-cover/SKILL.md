@@ -5,6 +5,8 @@ description: Use to generate calm, low-saturation mint-green colored-pencil arti
 
 # Calm Mint Pencil Cover
 
+[English](SKILL.md) | [简体中文](SKILL.zh-CN.md)
+
 Use this skill to keep a stable article-cover visual language:
 
 - ultra-wide 21:9 composition;
