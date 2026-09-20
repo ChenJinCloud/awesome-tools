@@ -1,0 +1,5 @@
+interface:
+  display_name: "公众号排版（chenjin.io）"
+  short_description: "将 Markdown 转成可复制到公众号的内联样式 HTML"
+  brand_color: "#2F8E7D"
+  default_prompt: "Use $wechat-public-account-format to convert this Markdown into a chenjin.io-styled WeChat article HTML."
