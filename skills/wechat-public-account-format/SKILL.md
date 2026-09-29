@@ -32,6 +32,17 @@ Set font size on each `p` and `li` rather than depending on inheritance. Set tab
 
 For translated or reposted blogs, show the H1 title, then the cover image, then two muted, right-aligned lines: publication date · reading time · category; original author · verified organization and role. Use source facts, never a fixed author identity. The renderer recognizes either `H1 → metadata → author → cover` or `H1 → cover → metadata → author` at the start of a Markdown file and emits this layout. The metadata line must begin with a Chinese year such as `2026 年`, and the author line must begin with `原作者：`.
 
+## Blog translation and reposting
+
+When asked to translate or repost a blog, preserve the original article and its provenance, then create a separate Chinese Markdown draft. The layout script does not translate content.
+
+1. **Inspect the source.** Record the original URL, title, publication date, author, verified affiliation and role, and category. Mark an estimated reading time as approximate; do not invent missing facts. Compare the translated draft against the source for structure, numbers, terminology, quotations, links, and references. Resolve extraction placeholders such as `__WPA_HOLD_...`; none may appear in the finished article.
+2. **Collect every image.** Inventory the cover and all in-article figures in source order. Download the actual assets, retain the URL-to-file mapping and captions or alt text, and confirm that each downloaded file is a usable image. A candidate URL alone is not a downloaded asset. Keep the figures at their original positions in the draft.
+3. **Translate faithfully.** Preserve arguments, figures, qualifications, attribution, and the author's voice. Check uncertain technical terms against the source; label editorial additions as such. Retain the author's social links and source links to papers, code, and other references.
+4. **Use the restrained layout.** Start with title, cover, then two muted right-aligned metadata lines. Keep the body primarily headings, paragraphs, lists, and original images; avoid proliferating cards and decoration. If a tinted “太长不看” summary is requested, use one subtle block there only.
+5. **Compact the sources.** Close with “原文与参考资料”: original article first, then numbered references in source order. Put author, outlet, and year on the first line; place the complete original title on a smaller muted second line; use thin separators without repeated bright underlines. Preserve working URLs for papers and code. In Markdown, use a `## 参考资料` list followed by `## 原文链接` and one standalone Markdown link; for recognized blog drafts, the renderer formats these as one compact section. WeChat may sanitize links, so set the original-source link separately in the editor when needed and inspect its preview.
+6. **Deliver according to authorization.** Inspect the local HTML for its cover, every figure, attribution, references, and stray placeholders. If asked to sync a draft, upload all images, set the cover and original-source link, and verify the WeChat preview and draft state. Publish only when authorized. An editor's note, column introduction, personal contact, or CTA belongs to an article only when requested; never hardcode one article's author, company, or contact into the general template.
+
 ## Run
 
 From the repository root:

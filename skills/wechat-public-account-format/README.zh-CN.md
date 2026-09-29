@@ -19,6 +19,7 @@ python3 skills/wechat-public-account-format/scripts/render_wechat.py "/path/to/a
 默认在 Markdown 原稿旁生成 `<原文件名>-公众号版.html`；可通过 `--output` 指定位置，通过 `--title` 覆盖标题。
 
 对于开头包含封面、日期行和“原作者：”行的 Blog 译文，脚本会将封面放在两行信息上方，并将信息右对齐。
+Blog 稿使用 `## 参考资料` 列表，紧接 `## 原文链接` 和单独的 Markdown 链接时，脚本还会生成紧凑的“原文与参考资料”区块。翻译、图片下载和公众号上传仍需按 Skill 中的流程单独处理。
 
 排版规则见 [SKILL.zh-CN.md](SKILL.zh-CN.md)，英文版见 [SKILL.md](SKILL.md)。
 

@@ -323,6 +323,79 @@ def blog_lead(lines: list[str]) -> tuple[str, str, int] | None:
     return rendered, re.sub(r"[*_]", "", heading_text), index
 
 
+def render_blog_sources(lines: list[str], start: int) -> tuple[str, int] | None:
+    """Render a blog bibliography and adjacent original link compactly."""
+    if lines[start].strip() not in ("## 参考资料", "## References"):
+        return None
+    index = start + 1
+    while index < len(lines) and not lines[index].strip():
+        index += 1
+    references: list[str] = []
+    while index < len(lines):
+        match = re.match(r"^\s*[-*+]\s+(.+)$", lines[index])
+        if match:
+            references.append(match.group(1).strip())
+            index += 1
+        elif not lines[index].strip():
+            index += 1
+        else:
+            break
+    if not references:
+        return None
+
+    original: tuple[str, str] | None = None
+    if index < len(lines) and lines[index].strip() in ("## 原文链接", "## Original article"):
+        next_index = index + 1
+        while next_index < len(lines) and not lines[next_index].strip():
+            next_index += 1
+        if next_index < len(lines):
+            link = re.fullmatch(r"\[([^\]]+)\]\(([^)\s]+)\)", lines[next_index].strip())
+            if link:
+                original = (link.group(1), link.group(2))
+                index = next_index + 1
+
+    output = [
+        '<h2 style="margin:36px 0 12px;padding-bottom:8px;'
+        f'border-bottom:1px solid {PALETTE["border"]};color:{PALETTE["headline"]};'
+        'font-size:17px;line-height:1.5;font-weight:700;">原文与参考资料</h2>'
+    ]
+    if original:
+        label, url = original
+        output.append(
+            f'<p style="margin:0 0 18px;color:{PALETTE["text"]};font-size:13px;line-height:1.7;">'
+            f'<strong style="font-size:13px;color:{PALETTE["headline"]};">英文原文</strong> · '
+            f'<a href="{safe_url(url)}" style="color:{PALETTE["accent_dark"]};text-decoration:none;font-size:13px;">'
+            f'{esc(label)}</a></p>'
+        )
+    for number, reference in enumerate(references, 1):
+        title_link = re.search(r"\[《?([^\]]+?)》?\]\(([^)\s]+)\)", reference)
+        if title_link:
+            title_text = title_link.group(1).removeprefix("《").removesuffix("》")
+            before = reference[: title_link.start()].strip(" ，,。 ")
+            after = reference[title_link.end() :].strip(" ，,。 ")
+            metadata = " · ".join(part for part in (before, after) if part)
+            title_html = (
+                f'<br><a href="{safe_url(title_link.group(2))}" '
+                'style="color:#6D8380;text-decoration:none;font-size:12px;line-height:1.65;">'
+                f'{esc(title_text)}</a>'
+            )
+        else:
+            metadata = reference
+            title_html = ""
+        metadata_html = inline(metadata).replace(
+            f'color:{PALETTE["accent"]};text-decoration:underline;',
+            'color:#6D8380;text-decoration:none;',
+        )
+        output.append(
+            f'<p style="margin:0;padding:10px 0;border-top:1px solid #EDF3EF;'
+            f'color:{PALETTE["text"]};font-size:13px;line-height:1.7;">'
+            f'<span style="color:{PALETTE["accent"]};font-size:12px;font-weight:700;">{number:02d}</span>&nbsp; '
+            f'<strong style="color:{PALETTE["text"]};font-size:13px;font-weight:600;">'
+            f'{metadata_html}</strong>{title_html}</p>'
+        )
+    return "".join(output), index
+
+
 def render_markdown(source: str, title_override: str | None = None) -> tuple[str, list[str]]:
     lines = source.replace("\r\n", "\n").replace("\r", "\n").split("\n")
     warnings: list[str] = []
@@ -348,6 +421,13 @@ def render_markdown(source: str, title_override: str | None = None) -> tuple[str
         if not stripped:
             index += 1
             continue
+
+        if lead:
+            sources = render_blog_sources(lines, index)
+            if sources:
+                rendered, index = sources
+                parts.append(rendered)
+                continue
 
         fence = fence_match(line)
         if fence:
