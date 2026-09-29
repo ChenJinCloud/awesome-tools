@@ -40,6 +40,7 @@ skills/
   daily-log/
   open-methodology-md/
   universal-methodology/
+  wechat-public-account-format/
 ```
 
 ## Current Entries
@@ -61,6 +62,7 @@ The `skills/` directory is the canonical public source for these skill packages.
 - [daily-log](skills/daily-log/SKILL.md): create or update daily logs and basic maintenance records.
 - [open-methodology-md](skills/open-methodology-md/SKILL.md): open the latest methodology Markdown document in a local reader.
 - [universal-methodology](skills/universal-methodology/SKILL.md): clarify ambiguous, high-stakes, or reusable matters before execution.
+- [wechat-public-account-format](skills/wechat-public-account-format/README.md): turn Markdown into inline-style HTML for the WeChat Official Account editor.
 
 ## Entry Template
 

@@ -51,11 +51,13 @@ def inline(text: str) -> str:
     held: list[str] = []
 
     def hold(value: str) -> str:
-        token = f"__WPA_HOLD_{len(held)}__"
+        # Private-use markers survive HTML escaping and cannot be mistaken for
+        # Markdown emphasis before the held HTML is restored.
+        token = f"\uE000{len(held)}\uE001"
         held.append(value)
         return token
 
-    text = text.replace("<br>", "__WPA_BR__").replace("<br/>", "__WPA_BR__").replace("<br />", "__WPA_BR__")
+    text = text.replace("<br>", "\uE002").replace("<br/>", "\uE002").replace("<br />", "\uE002")
 
     image_pattern = re.compile(r"!\[([^\]]*)\]\(([^)\s]+)(?:\s+\"([^\"]*)\")?\)")
 
@@ -82,7 +84,7 @@ def inline(text: str) -> str:
 
     text = link_pattern.sub(link_repl, text)
     text = esc(text, quote=False)
-    text = text.replace("__WPA_BR__", "<br>")
+    text = text.replace("\uE002", "<br>")
 
     code_tick = chr(96)
     text = re.sub(
@@ -96,7 +98,7 @@ def inline(text: str) -> str:
     text = re.sub(r"(?<!_)_([^_]+)_(?!_)", r"<em>\1</em>", text)
 
     for index, value in enumerate(held):
-        text = text.replace(f"__WPA_HOLD_{index}__", value)
+        text = text.replace(f"\uE000{index}\uE001", value)
     return text
 
 
@@ -338,7 +340,7 @@ def render_markdown(source: str, title_override: str | None = None) -> tuple[str
                 rows.append(split_table_row(lines[index]))
                 index += 1
             if any("![" in cell for row in rows for cell in row):
-                warnings.append("表格中包含图片；粘贴到公众号后可能需要重新上传。")
+                warnings.append("A table contains an image; you may need to upload it again in WeChat. / 表格中包含图片；粘贴到公众号后可能需要重新上传。")
             parts.append(render_table(header, rows))
             continue
 
@@ -384,7 +386,7 @@ def render_markdown(source: str, title_override: str | None = None) -> tuple[str
             parts.append(render_callout(paragraph))
         else:
             if "![" in paragraph:
-                warnings.append("文中包含图片；本地路径或临时 URL 通常需要在公众号编辑器中重新上传。")
+                warnings.append("The article contains images; local paths or temporary URLs usually need a new upload in WeChat. / 文中包含图片；本地路径或临时 URL 通常需要在公众号编辑器中重新上传。")
             parts.append(
                 f'<p style="margin:0 0 14px;color:{PALETTE["text"]};'
                 f'font-size:{BODY_SIZE}px;line-height:1.9;">{inline(paragraph)}</p>'
@@ -410,25 +412,25 @@ def render_markdown(source: str, title_override: str | None = None) -> tuple[str
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Render Markdown to inline-style WeChat article HTML.")
-    parser.add_argument("input", type=Path, help="Input Markdown file")
-    parser.add_argument("--output", type=Path, help="Output HTML path")
-    parser.add_argument("--title", help="Override article title")
+    parser = argparse.ArgumentParser(description="Render Markdown to inline-style WeChat article HTML. / 将 Markdown 渲染为公众号内联样式 HTML。")
+    parser.add_argument("input", type=Path, help="Input Markdown file / 输入 Markdown 文件")
+    parser.add_argument("--output", type=Path, help="Output HTML path / 输出 HTML 路径")
+    parser.add_argument("--title", help="Override article title / 覆盖文章标题")
     args = parser.parse_args()
 
     source_path = args.input.expanduser().resolve()
     if not source_path.is_file():
-        parser.error(f"Input file does not exist: {source_path}")
+        parser.error(f"Input file does not exist / 输入文件不存在: {source_path}")
     if source_path.suffix.lower() != ".md":
-        parser.error("Input file must have a .md extension")
+        parser.error("Input file must have a .md extension / 输入文件必须使用 .md 扩展名")
 
     output_path = args.output.expanduser().resolve() if args.output else source_path.with_name(f"{source_path.stem}-公众号版.html")
     document, warnings = render_markdown(source_path.read_text(encoding="utf-8"), args.title)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(document, encoding="utf-8")
-    print(f"Generated: {output_path}")
+    print(f"Generated / 已生成: {output_path}")
     for warning in sorted(set(warnings)):
-        print(f"Warning: {warning}", file=sys.stderr)
+        print(f"Warning / 提醒: {warning}", file=sys.stderr)
     return 0
 
 

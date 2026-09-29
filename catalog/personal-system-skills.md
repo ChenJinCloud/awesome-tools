@@ -4,7 +4,7 @@
 
 ## What This Is
 
-A public-safe bundle of reusable agent skills for personal operating systems, agent governance, daily records, conversation closeout, creator pricing, and stable visual generation.
+A public-safe bundle of reusable agent skills for personal operating systems, agent governance, daily records, conversation closeout, creator pricing, article formatting, and stable visual generation.
 
 These are sanitized versions of local workflows. They preserve reusable structure while removing private machine paths, account identifiers, private archives, local evidence, and personal records.
 
@@ -20,13 +20,14 @@ These are sanitized versions of local workflows. They preserve reusable structur
 | `codex-closeout-archive` | Preserve an agent conversation as a concise process asset. | No transcripts or session contents. |
 | `creator-pricing` | Evaluate creator sponsorship pricing and negotiation options. | Public evaluation framework only. |
 | `calm-mint-pencil-cover` | Generate a stable mint colored-pencil article cover style. | Visual style prompt only. |
+| `wechat-public-account-format` | Render Markdown as inline-style HTML for the WeChat Official Account editor. | No account access, article drafts, or private image assets. |
 
 ## Why It Is High Quality
 
 - Each skill captures a repeatable workflow rather than a one-off prompt.
 - Sensitive local workflows are expressed through placeholders and boundaries.
 - Skill scope is narrow enough for future agents to use without reading unrelated context.
-- The bundle separates decision methodology, agent governance, record keeping, business evaluation, and visual generation.
+- The bundle separates decision methodology, agent governance, record keeping, business evaluation, article formatting, and visual generation.
 
 ## Best Use Cases
 

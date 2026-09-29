@@ -40,6 +40,7 @@ skills/
   daily-log/
   open-methodology-md/
   universal-methodology/
+  wechat-public-account-format/
 ```
 
 ## 当前条目
@@ -61,6 +62,7 @@ skills/
 - [daily-log](skills/daily-log/SKILL.zh-CN.md)：创建或更新每日日志及基础维护记录。
 - [open-methodology-md](skills/open-methodology-md/SKILL.zh-CN.md)：在本地阅读器中打开最新的方法论 Markdown 文档。
 - [universal-methodology](skills/universal-methodology/SKILL.zh-CN.md)：在执行前厘清模糊、高风险或具有复用价值的事项。
+- [wechat-public-account-format](skills/wechat-public-account-format/README.zh-CN.md)：将 Markdown 转为适合公众号编辑器的内联样式 HTML。
 
 ## 条目模板
 
