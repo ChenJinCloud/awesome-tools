@@ -30,6 +30,8 @@ Default font sizes: body, paragraphs, and list items 14px; H1 26px; H2 20px; H3 
 
 Set font size on each `p` and `li` rather than depending on inheritance. Set table font size on each `th` and `td`. Render paragraphs beginning with `**核心动作：**` as single-cell highlighted callouts. Keep tables readable and avoid complex nested layouts.
 
+For translated or reposted blogs, show the H1 title, then the cover image, then two muted, right-aligned lines: publication date · reading time · category; original author · verified organization and role. Use source facts, never a fixed author identity. The renderer recognizes either `H1 → metadata → author → cover` or `H1 → cover → metadata → author` at the start of a Markdown file and emits this layout. The metadata line must begin with a Chinese year such as `2026 年`, and the author line must begin with `原作者：`.
+
 ## Run
 
 From the repository root:

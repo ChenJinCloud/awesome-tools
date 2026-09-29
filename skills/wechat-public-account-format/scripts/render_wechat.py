@@ -283,6 +283,46 @@ def fence_match(line: str) -> re.Match[str] | None:
     return re.match(r"^\s*~~~(.*)$", line) or re.match(r"^\s*" + re.escape(backticks) + r"(.*)$", line)
 
 
+def blog_lead(lines: list[str]) -> tuple[str, str, int] | None:
+    """Render a leading blog cover followed by right-aligned source metadata."""
+    index = 0
+
+    def next_line() -> tuple[str, int] | None:
+        nonlocal index
+        while index < len(lines) and not lines[index].strip():
+            index += 1
+        if index >= len(lines):
+            return None
+        result = (lines[index].strip(), index)
+        index += 1
+        return result
+
+    heading = next_line()
+    if not heading or not re.match(r"^#\s+\S", heading[0]):
+        return None
+    fields = [next_line(), next_line(), next_line()]
+    if any(field is None for field in fields):
+        return None
+    values = [field[0] for field in fields if field]
+    image = next((value for value in values if value.startswith("![") and value.endswith(")")), None)
+    date = next((value for value in values if re.match(r"^\d{4}\s*年", value)), None)
+    author = next((value for value in values if value.startswith(("原作者：", "Original author:"))), None)
+    if not image or not date or not author:
+        return None
+    if values not in ([date, author, image], [image, date, author]):
+        return None
+
+    heading_text = re.sub(r"\s*#*\s*$", "", heading[0][2:].strip())
+    cover = inline(image).replace("margin:20px auto;", "margin:0 auto;")
+    rendered = (
+        f'<h1 style="{style_heading(1)}">{inline(heading_text)}</h1>'
+        f'<p style="margin:0 0 12px;font-size:{BODY_SIZE}px;line-height:1.85;">{cover}</p>'
+        f'<p style="margin:0 0 3px;text-align:right;color:#6D8380;font-size:12px;line-height:1.65;">{inline(date)}</p>'
+        f'<p style="margin:0 0 24px;text-align:right;color:#6D8380;font-size:12px;line-height:1.65;">{inline(author)}</p>'
+    )
+    return rendered, re.sub(r"[*_]", "", heading_text), index
+
+
 def render_markdown(source: str, title_override: str | None = None) -> tuple[str, list[str]]:
     lines = source.replace("\r\n", "\n").replace("\r", "\n").split("\n")
     warnings: list[str] = []
@@ -294,6 +334,13 @@ def render_markdown(source: str, title_override: str | None = None) -> tuple[str
         closing = next((pos for pos in range(1, len(lines)) if lines[pos].strip() == "---"), None)
         if closing is not None:
             lines = lines[closing + 1 :]
+
+    lead = blog_lead(lines)
+    if lead:
+        rendered, lead_title, index = lead
+        parts.append(rendered)
+        if not title:
+            title = lead_title
 
     while index < len(lines):
         line = lines[index]

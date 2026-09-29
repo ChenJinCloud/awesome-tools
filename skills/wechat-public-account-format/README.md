@@ -18,6 +18,8 @@ python3 skills/wechat-public-account-format/scripts/render_wechat.py "/path/to/a
 
 The renderer writes `<source-stem>-公众号版.html` next to the Markdown source unless `--output` is supplied. Use `--title` to override the title.
 
+For blog translations with a leading cover, date line, and `原作者：` line, it places the cover before both metadata lines and right-aligns them.
+
 See [SKILL.md](SKILL.md) for formatting rules and [the Chinese instructions](SKILL.zh-CN.md).
 
 ## Boundaries
