@@ -41,6 +41,7 @@ skills/
   open-methodology-md/
   universal-methodology/
   wechat-public-account-format/
+  x-post-3x4-capture/
 ```
 
 ## 当前条目
@@ -63,6 +64,7 @@ skills/
 - [open-methodology-md](skills/open-methodology-md/SKILL.zh-CN.md)：在本地阅读器中打开最新的方法论 Markdown 文档。
 - [universal-methodology](skills/universal-methodology/SKILL.zh-CN.md)：在执行前厘清模糊、高风险或具有复用价值的事项。
 - [wechat-public-account-format](skills/wechat-public-account-format/README.zh-CN.md)：将 Markdown 转为适合公众号编辑器的内联样式 HTML。
+- [x-post-3x4-capture](skills/x-post-3x4-capture/SKILL.zh-CN.md)：将 X 原帖截成适合小红书的紧凑 3:4 竖版 PNG。
 
 ## 条目模板
 

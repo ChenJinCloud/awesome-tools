@@ -1,0 +1,4 @@
+interface:
+  display_name: "X Post 3:4 Capture / X 原帖竖版截图"
+  short_description: "Native X screenshots for Xiaohongshu / 小红书原帖截图"
+  default_prompt: "Use $x-post-3x4-capture to capture this X post as compact 3:4 PNGs. / 使用 $x-post-3x4-capture 将这条 X 原帖截成紧凑的 3:4 竖版 PNG。"

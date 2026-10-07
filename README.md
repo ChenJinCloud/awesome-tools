@@ -41,6 +41,7 @@ skills/
   open-methodology-md/
   universal-methodology/
   wechat-public-account-format/
+  x-post-3x4-capture/
 ```
 
 ## Current Entries
@@ -63,6 +64,7 @@ The `skills/` directory is the canonical public source for these skill packages.
 - [open-methodology-md](skills/open-methodology-md/SKILL.md): open the latest methodology Markdown document in a local reader.
 - [universal-methodology](skills/universal-methodology/SKILL.md): clarify ambiguous, high-stakes, or reusable matters before execution.
 - [wechat-public-account-format](skills/wechat-public-account-format/README.md): turn Markdown into inline-style HTML for the WeChat Official Account editor.
+- [x-post-3x4-capture](skills/x-post-3x4-capture/SKILL.md): capture native X posts as compact 3:4 portrait PNGs for Xiaohongshu.
 
 ## Entry Template
 
