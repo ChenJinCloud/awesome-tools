@@ -26,6 +26,9 @@
 catalog/
   macos-wechat-export-capability.md
   personal-system-skills.md
+chenjin.brand/
+  skills/
+    chenjin-brand-xiaohongshu/
 docs/
   repository-consolidation/
   superpowers/
@@ -49,11 +52,12 @@ skills/
 | 条目 | 类型 | 状态 |
 | --- | --- | --- |
 | [个人系统 Skills](catalog/personal-system-skills.zh-CN.md)（[English](catalog/personal-system-skills.md)） | Agent Skill 合集 | 已加入经过脱敏、适合公开的 Skill 集合 |
+| [chenjin.brand](chenjin.brand/README.zh-CN.md)（[English](chenjin.brand/README.md)） | 个人品牌设计 Skill 集合 | 首个小红书 3:4 竖图 Skill |
 | [私有微信归档能力与导出后用例](catalog/macos-wechat-export-capability.zh-CN.md)（[English](catalog/macos-wechat-export-capability.md)） | 私有本地能力 | 只公开能力和实际导出后用例；实现保持私有 |
 
 ## Skills
 
-`skills/` 是这些 Skill 包的公开权威源。除非某个 Skill 具有无法在本仓库中支持的独立发布生命周期，否则不应再维护第二个独立仓库。
+`skills/` 和 `chenjin.brand/skills/` 是这些 Skill 包的公开权威源。除非某个 Skill 具有无法在本仓库中支持的独立发布生命周期，否则不应再维护第二个独立仓库。
 
 - [agent-os-global](skills/agent-os-global/SKILL.zh-CN.md)：把本地 Agent OS 治理规则应用到非简单任务。
 - [agent-os-operation](skills/agent-os-operation/SKILL.zh-CN.md)：运行或审查 Agent OS 治理项目。
@@ -65,6 +69,7 @@ skills/
 - [universal-methodology](skills/universal-methodology/SKILL.zh-CN.md)：在执行前厘清模糊、高风险或具有复用价值的事项。
 - [wechat-public-account-format](skills/wechat-public-account-format/README.zh-CN.md)：将 Markdown 转为适合公众号编辑器的内联样式 HTML。
 - [x-post-3x4-capture](skills/x-post-3x4-capture/SKILL.zh-CN.md)：将 X 原帖截成适合小红书的紧凑 3:4 竖版 PNG。
+- [chenjin-brand-xiaohongshu](chenjin.brand/skills/chenjin-brand-xiaohongshu/SKILL.zh-CN.md)：用代码设计原创小红书品牌竖图，保留可编辑 HTML/CSS 并导出 PNG。
 
 ## 条目模板
 

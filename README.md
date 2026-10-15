@@ -26,6 +26,9 @@ All human-facing content is available in English and Simplified Chinese, includi
 catalog/
   macos-wechat-export-capability.md
   personal-system-skills.md
+chenjin.brand/
+  skills/
+    chenjin-brand-xiaohongshu/
 docs/
   repository-consolidation/
   superpowers/
@@ -49,11 +52,12 @@ skills/
 | Entry | Type | Status |
 | --- | --- | --- |
 | [Personal System Skills](catalog/personal-system-skills.md) ([中文](catalog/personal-system-skills.zh-CN.md)) | Agent skill bundle | Public-safe sanitized skill set added |
+| [chenjin.brand](chenjin.brand/README.md) ([中文](chenjin.brand/README.zh-CN.md)) | Personal brand design skills | First 3:4 Xiaohongshu card skill |
 | [Private WeChat Archive Capability and Post-Export Uses](catalog/macos-wechat-export-capability.md) ([中文](catalog/macos-wechat-export-capability.zh-CN.md)) | Private local capability | Capability and actual post-export uses only; implementation remains private |
 
 ## Skills
 
-The `skills/` directory is the canonical public source for these skill packages. A skill should not be maintained in a second standalone repository unless it has an independent release lifecycle that cannot be supported here.
+The `skills/` directory and `chenjin.brand/skills/` collection are the canonical public sources for these skill packages. A skill should not be maintained in a second standalone repository unless it has an independent release lifecycle that cannot be supported here.
 
 - [agent-os-global](skills/agent-os-global/SKILL.md): apply local Agent OS governance to non-trivial agent work.
 - [agent-os-operation](skills/agent-os-operation/SKILL.md): operate or audit an Agent OS governance project.
@@ -65,6 +69,7 @@ The `skills/` directory is the canonical public source for these skill packages.
 - [universal-methodology](skills/universal-methodology/SKILL.md): clarify ambiguous, high-stakes, or reusable matters before execution.
 - [wechat-public-account-format](skills/wechat-public-account-format/README.md): turn Markdown into inline-style HTML for the WeChat Official Account editor.
 - [x-post-3x4-capture](skills/x-post-3x4-capture/SKILL.md): capture native X posts as compact 3:4 portrait PNGs for Xiaohongshu.
+- [chenjin-brand-xiaohongshu](chenjin.brand/skills/chenjin-brand-xiaohongshu/SKILL.md): design original 3:4 Xiaohongshu brand cards with editable HTML/CSS and PNG output.
 
 ## Entry Template
 

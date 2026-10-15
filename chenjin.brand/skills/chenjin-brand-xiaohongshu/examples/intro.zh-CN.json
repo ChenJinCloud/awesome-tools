@@ -1,0 +1,20 @@
+{
+  "mode": "intro",
+  "name": "陈今",
+  "role": "AI 产品全球化\n增长实践",
+  "summary": "从运营经验出发，\n走进 AI 产品增长一线。",
+  "project": "项目发布实践 · 排版示例",
+  "metrics": [
+    {"value": "#1", "label": "Product Hunt"},
+    {"value": "#1", "label": "GitHub Trending"},
+    {"value": "3,000+", "label": "一周新增\nGitHub Stars"},
+    {"value": "1.5M", "label": "X 曝光量"}
+  ],
+  "topics": [
+    "AI 产品增长运营，真实在做什么",
+    "怎样把运营经验变成求职作品",
+    "项目里的判断、验证与复盘"
+  ],
+  "footer": "写给想转 AI 产品增长运营的你",
+  "brand": "chenjin.io"
+}

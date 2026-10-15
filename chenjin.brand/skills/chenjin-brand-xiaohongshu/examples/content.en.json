@@ -1,0 +1,13 @@
+{
+  "mode": "content",
+  "brand": "chenjin.io",
+  "footer": "Projects and portfolios",
+  "pages": [{
+    "title": "Make project experience\nreadable as a portfolio",
+    "blocks": [
+      {"type": "paragraph", "text": "Describe the context and your role so the reader understands the problem you were working on."},
+      {"type": "bullets", "items": ["Explain the actions you owned", "State the result and its timeframe", "Keep work samples or evidence that can be checked"]},
+      {"type": "quote", "text": "Explain the practice clearly, then use layout to help readers understand it."}
+    ]
+  }]
+}

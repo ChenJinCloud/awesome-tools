@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chenjin Brand Cards / 陈今品牌竖图"
+  short_description: "Create editable 3:4 brand cards / 用代码制作小红书品牌竖图"
+  default_prompt: "Use $chenjin-brand-xiaohongshu to turn my content into readable 3:4 Xiaohongshu cards with editable HTML and PNG output. / 将我的内容制作成清楚易读的品牌竖图。"

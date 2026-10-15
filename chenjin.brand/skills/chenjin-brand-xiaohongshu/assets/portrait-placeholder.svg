@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="434" height="624" viewBox="0 0 434 624">
+  <defs><linearGradient id="paper" x2="0" y2="1"><stop stop-color="#DDE7DF"/><stop offset="1" stop-color="#C6D7CB"/></linearGradient></defs>
+  <rect width="434" height="624" fill="url(#paper)"/>
+  <circle cx="217" cy="228" r="90" fill="#A5BFAE"/>
+  <path d="M53 624v-69c0-101 70-175 164-175s164 74 164 175v69" fill="#92AD9B"/>
+  <g font-family="sans-serif" fill="#35584A" text-anchor="middle">
+    <text x="217" y="549" font-size="21">Portrait placeholder</text>
+    <text x="217" y="581" font-size="21">人物照片占位</text>
+  </g>
+</svg>

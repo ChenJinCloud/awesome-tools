@@ -1,0 +1,13 @@
+{
+  "mode": "content",
+  "brand": "chenjin.io",
+  "footer": "项目与作品",
+  "pages": [{
+    "title": "把项目经历\n整理成可读的作品",
+    "blocks": [
+      {"type": "paragraph", "text": "先交代项目背景与自己的角色，让读者知道你当时要解决什么问题。"},
+      {"type": "bullets", "items": ["写清自己负责的动作", "给出结果及对应的时间范围", "保留可以核对的作品或证据"]},
+      {"type": "quote", "text": "把一次实践写清楚，再让版式帮助读者读懂。"}
+    ]
+  }]
+}

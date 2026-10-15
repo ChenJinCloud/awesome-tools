@@ -1,0 +1,19 @@
+{
+  "mode": "intro",
+  "hello": "Hello, I'm",
+  "name": "Chen Jin",
+  "name_size": 104,
+  "role": "Global growth\nfor AI products",
+  "summary": "From operations experience\nto AI product growth.",
+  "project": "Product launch · Layout example",
+  "metrics": [
+    {"value": "#1", "label": "Product Hunt"},
+    {"value": "#1", "label": "GitHub Trending"},
+    {"value": "3,000+", "label": "First-week\nGitHub Stars"},
+    {"value": "1.5M", "label": "X impressions"}
+  ],
+  "topics_title": "What I share here",
+  "topics": ["The daily work of AI product growth", "Turning operations work into a portfolio", "Project decisions, validation, and reflection"],
+  "footer": "For people moving into AI product growth",
+  "brand": "chenjin.io"
+}
