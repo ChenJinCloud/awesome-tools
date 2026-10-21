@@ -1,0 +1,3 @@
+display_name: "Painpoint Content Writer / 痛点经验内容写作"
+short_description: "Turn solved pain points into evidence-bounded methodology drafts. / 将已解决的痛点整理成有证据边界的方法论草稿。"
+default_prompt: "Use jike-painpoint-content to turn a solved pain point into a portable, evidence-bounded methodology draft. Do not publish it. / 使用 jike-painpoint-content 将已解决的痛点整理成可移植、依据明确的方法论草稿。不要发布。"

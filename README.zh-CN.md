@@ -42,6 +42,7 @@ skills/
   creator-pricing/
   daily-log/
   open-methodology-md/
+  jike-painpoint-content/
   universal-methodology/
   wechat-public-account-format/
   x-post-3x4-capture/
@@ -53,6 +54,7 @@ skills/
 | --- | --- | --- |
 | [个人系统 Skills](catalog/personal-system-skills.zh-CN.md)（[English](catalog/personal-system-skills.md)） | Agent Skill 合集 | 已加入经过脱敏、适合公开的 Skill 集合 |
 | [chenjin.brand](chenjin.brand/README.zh-CN.md)（[English](chenjin.brand/README.md)） | 个人品牌设计 Skill 集合 | 首个小红书 3:4 竖图 Skill |
+| [jike-painpoint-content](skills/jike-painpoint-content/SKILL.zh-CN.md)（[English](skills/jike-painpoint-content/SKILL.md)） | Agent Skill | 将已解决的痛点整理成有证据边界的方法论草稿 |
 | [私有微信归档能力与导出后用例](catalog/macos-wechat-export-capability.zh-CN.md)（[English](catalog/macos-wechat-export-capability.md)） | 私有本地能力 | 只公开能力和实际导出后用例；实现保持私有 |
 
 ## Skills
@@ -66,6 +68,7 @@ skills/
 - [creator-pricing](skills/creator-pricing/SKILL.zh-CN.md)：评估创作者赞助报价和谈判方案。
 - [daily-log](skills/daily-log/SKILL.zh-CN.md)：创建或更新每日日志及基础维护记录。
 - [open-methodology-md](skills/open-methodology-md/SKILL.zh-CN.md)：在本地阅读器中打开最新的方法论 Markdown 文档。
+- [jike-painpoint-content](skills/jike-painpoint-content/SKILL.zh-CN.md)：将已解决的痛点整理成有证据边界、适用于多个平台的方法论草稿。
 - [universal-methodology](skills/universal-methodology/SKILL.zh-CN.md)：在执行前厘清模糊、高风险或具有复用价值的事项。
 - [wechat-public-account-format](skills/wechat-public-account-format/README.zh-CN.md)：将 Markdown 转为适合公众号编辑器的内联样式 HTML。
 - [x-post-3x4-capture](skills/x-post-3x4-capture/SKILL.zh-CN.md)：将 X 原帖截成适合小红书的紧凑 3:4 竖版 PNG。

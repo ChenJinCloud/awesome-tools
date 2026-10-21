@@ -42,6 +42,7 @@ skills/
   creator-pricing/
   daily-log/
   open-methodology-md/
+  jike-painpoint-content/
   universal-methodology/
   wechat-public-account-format/
   x-post-3x4-capture/
@@ -53,6 +54,7 @@ skills/
 | --- | --- | --- |
 | [Personal System Skills](catalog/personal-system-skills.md) ([中文](catalog/personal-system-skills.zh-CN.md)) | Agent skill bundle | Public-safe sanitized skill set added |
 | [chenjin.brand](chenjin.brand/README.md) ([中文](chenjin.brand/README.zh-CN.md)) | Personal brand design skills | First 3:4 Xiaohongshu card skill |
+| [jike-painpoint-content](skills/jike-painpoint-content/SKILL.md) ([中文](skills/jike-painpoint-content/SKILL.zh-CN.md)) | Agent skill | Evidence-bounded methodology drafts from solved pain points |
 | [Private WeChat Archive Capability and Post-Export Uses](catalog/macos-wechat-export-capability.md) ([中文](catalog/macos-wechat-export-capability.zh-CN.md)) | Private local capability | Capability and actual post-export uses only; implementation remains private |
 
 ## Skills
@@ -66,6 +68,7 @@ The `skills/` directory and `chenjin.brand/skills/` collection are the canonical
 - [creator-pricing](skills/creator-pricing/SKILL.md): evaluate creator sponsorship pricing and negotiation options.
 - [daily-log](skills/daily-log/SKILL.md): create or update daily logs and basic maintenance records.
 - [open-methodology-md](skills/open-methodology-md/SKILL.md): open the latest methodology Markdown document in a local reader.
+- [jike-painpoint-content](skills/jike-painpoint-content/SKILL.md): turn solved pain points into evidence-bounded, platform-neutral methodology drafts.
 - [universal-methodology](skills/universal-methodology/SKILL.md): clarify ambiguous, high-stakes, or reusable matters before execution.
 - [wechat-public-account-format](skills/wechat-public-account-format/README.md): turn Markdown into inline-style HTML for the WeChat Official Account editor.
 - [x-post-3x4-capture](skills/x-post-3x4-capture/SKILL.md): capture native X posts as compact 3:4 portrait PNGs for Xiaohongshu.
